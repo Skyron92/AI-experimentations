@@ -1,0 +1,6 @@
+	Goal Oriented Action Planner :
+
+	Une amélioration du planner qui conciste, en faisant appel au Pathfinding, à trouver la suite d'actions à réaliser pour arriver le pus efficacement à un objetcif.
+
+	Ressources : 
+		-Dijkstra's algorythm
