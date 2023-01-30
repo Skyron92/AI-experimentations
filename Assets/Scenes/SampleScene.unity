@@ -137,6 +137,10 @@ GameObject:
   - component: {fileID: 565321000}
   - component: {fileID: 565320999}
   - component: {fileID: 565321004}
+  - component: {fileID: 565321005}
+  - component: {fileID: 565321008}
+  - component: {fileID: 565321007}
+  - component: {fileID: 565321006}
   m_Layer: 0
   m_Name: Agent
   m_TagString: Untagged
@@ -253,9 +257,75 @@ MonoBehaviour:
   m_GameObject: {fileID: 565320998}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01ee7de690935094cb4700af4a4136fe, type: 3}
+  m_Script: {fileID: 11500000, guid: a219414e1b2c48e8bf9b9d969e718e15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _navMeshAgent: {fileID: 0}
+  Kitchen: {fileID: 1616588625}
+  Money: 150
+  HasIngredients: 0
+  HasPie: 0
+  CurrentAction: {fileID: 0}
+--- !u!114 &565321005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565320998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aedbfb3b31d8479ca47d7db39d3399cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cost: 2
+  CurrentAgent: {fileID: 565321004}
+  target: {fileID: 0}
+--- !u!114 &565321006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565320998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a81127bc7f9406898be4812eb7cfbfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cost: 10
+  CurrentAgent: {fileID: 565321004}
+  target: {fileID: 0}
+--- !u!114 &565321007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565320998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dc408d3afe2418895da354dad0ff79c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cost: 4
+  CurrentAgent: {fileID: 565321004}
+  target: {fileID: 0}
+--- !u!114 &565321008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565320998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb8d97d269a847f78229a1ad2a3f3b16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cost: 0
+  CurrentAgent: {fileID: 565321004}
+  target: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -543,4 +613,49 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1616588623
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1616588625}
+  - component: {fileID: 1616588624}
+  m_Layer: 0
+  m_Name: Kitchen
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1616588624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1616588623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81d297ddc46c289499e026c1ad5fd551, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Size: {x: 10, y: 10, z: 10}
+--- !u!4 &1616588625
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1616588623}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.7543597, y: 0.95000005, z: -10.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

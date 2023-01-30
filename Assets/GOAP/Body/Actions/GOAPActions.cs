@@ -1,14 +1,20 @@
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public abstract class GOAPActions : MonoBehaviour {
-    private HashSet<KeyValuePair<string, object>> precondition;
-    private HashSet<KeyValuePair<string, object>> effects;
+
+    public GOAPActions(Agent currentAgent) {
+        CurrentAgent = currentAgent;
+    }
+    private Tuple<string, object> precondition;
+    private Tuple<string, object> effects;
 
     [Header("Actions Settings")]
-    [SerializeField] private float Cost;
-    [SerializeField] private GameObject target;
-    
-    
+    public float Cost;
+
+    public Agent CurrentAgent;
+
+    public abstract bool IsDone();
+    public abstract void Do();
 
 }
